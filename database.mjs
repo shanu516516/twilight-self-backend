@@ -1,7 +1,8 @@
 // database.mjs
 import { Pool } from "pg";
-
+import dotenv from 'dotenv';
 // Database configuration
+dotenv.config();
 const pool = new Pool({
   user: process.env.DB_USER || "zkpass",
   host: process.env.DB_HOST || "localhost",
